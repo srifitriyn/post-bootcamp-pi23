@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import MainButton from "../components/MainButton";
+import PokemonLogo from "../../public/pokemon-logo.png"
 
 function PokemonDetail() {
   const { id } = useParams();
@@ -35,7 +36,7 @@ function PokemonDetail() {
         </div>
         <Link to="/">
           <img
-            src="../public/pokemon-logo.png"
+            src={PokemonLogo}
             width={200}
             alt="Pokemon Logo"
           />
