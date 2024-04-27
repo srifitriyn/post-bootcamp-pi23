@@ -3,6 +3,7 @@ import axios from "axios";
 import { TextInput } from "flowbite-react";
 import MainButton from "../components/MainButton";
 import { Link } from "react-router-dom";
+import PokemonLogo from "../../public/pokemon-logo.png"
 
 function Pokemons() {
   const [pokemons, setPokemons] = useState([]);
@@ -37,7 +38,7 @@ function Pokemons() {
       <div className="py-4 px-20 flex items-center justify-between gap-10 bg-[#f1d287]">
         <Link to="/">
           <img
-            src="./src/assets/pokemon-logo.png"
+            src={PokemonLogo}
             width={200}
             alt="Pokemon Logo"
           />
