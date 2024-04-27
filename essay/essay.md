@@ -22,10 +22,14 @@ A.5 State digunakan ketika sebuah komponen memerlukan data yang dinamis yang har
 Kemudian, jika dalam aplikasi To Do List dibutuhkan beberapa button seperti tambah, edit, dan hapus, developer bisa membuat satu komponen button saja dan memanfaatkan props. Props seperti onClick digunakan untuk menangani event klik, label atau text untuk menyesuaikan teks yang ditampilkan pada button, dan bahkan bisa mencakup properti-properti lain seperti warna button. Dengan ini, developer tidak perlu membuat tiga komponen button yang berbeda secara terpisah, yang mana dapat mengurangi duplikasi kode.
 
 Q.6 Apa itu state management dan kapan harus menggunakannya?
-A.6 State management adalah 
+A.6 State management adalah cara mengelola state dalam komponen. Sebagaimana disebutkan sebelumnya bahwa dalam pengembangan wesbite sering kali diperlukan data, data tersebut ada kalanya hanya diperlukan di satu komponen saja, tapi ada juga data yang diperlukan antar komponen. Dengan state management developer dapat mengelola data-data tersebut berdasarkan keperluannya.
+
+Jika data yang diperlukan bersifat lokal dan tidak kompleks, maka cukup menggunakan useState. Adapun jika datanya yang diperlukan bersifat global dan kompleks, maka dapat menggunakan state management lanjutan seperti React Redux atau React Context.
 
 Q.7 Apa itu ORM/ODM?
-A.7
+A.7 ORM atau Object Relational Mapping adalah sebuah teknik relasi data yang digunakan untuk menghubungkan data melalui tabel. Sedangkan ODM atau Object Document Mapping menghubungkan data melalui bentuk dokumen.
 
 Q.8 Apa perbedaan SQL dan NoSQL?
-A.8
+A.8  SQL merelasikan data menggunakan tabel dengan skema yang telah ditentukan sebelumnya. Artinya struktur tabel dan jenis data harus didefinisikan sebelum data dapat dimasukkan. Kemudian data disimpan dalam tabel yang terstruktur dengan kolom dan baris, dan setiap baris memiliki nilai yang sesuai dengan kolom tertentu.
+
+Sedangkan NoSQL umumnya tidak menggunakan tabel dalam merelasikan datanya, melainkan melalui dokumen, key-value, atau yang lainnya.
