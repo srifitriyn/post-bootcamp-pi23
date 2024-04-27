@@ -35,7 +35,7 @@ function PokemonDetail() {
         </div>
         <Link to="/">
           <img
-            src="pokemon-project/public/pokemon-logo.png"
+            src="../public/pokemon-logo.png"
             width={200}
             alt="Pokemon Logo"
           />
