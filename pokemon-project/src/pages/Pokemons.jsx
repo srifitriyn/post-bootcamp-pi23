@@ -3,7 +3,7 @@ import axios from "axios";
 import { TextInput } from "flowbite-react";
 import MainButton from "../components/MainButton";
 import { Link } from "react-router-dom";
-import PokemonLogo from "../../public/pokemon-logo.png"
+import PokemonLogo from "../../public/pokemon-logo.png";
 
 function Pokemons() {
   const [pokemons, setPokemons] = useState([]);
@@ -35,13 +35,9 @@ function Pokemons() {
 
   return (
     <>
-      <div className="py-4 px-20 flex items-center justify-between gap-10 bg-[#f1d287]">
+      <div className="py-4 px-20 flex flex-col md:flex-row items-center justify-between gap-5 bg-[#f1d287]">
         <Link to="/">
-          <img
-            src={PokemonLogo}
-            width={200}
-            alt="Pokemon Logo"
-          />
+          <img src={PokemonLogo} width={200} alt="Pokemon Logo" />
         </Link>
         <TextInput
           className="rounded-lg border-none"
@@ -55,6 +51,8 @@ function Pokemons() {
       <div className="wrapper">
         {loading ? (
           <span>Loading...</span>
+        ) : filteredPokemons.length === 0 ? (
+          <span>No pokemon is found.</span>
         ) : (
           filteredPokemons.map((item) => (
             <div
